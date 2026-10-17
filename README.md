@@ -13,6 +13,8 @@ Classifying paintings into five art movements — **Baroque, Expressionism, Impr
 
 ## Results (test set)
 
+![Model comparison](results/model_comparison.png)
+
 | Model | Pretrained checkpoint | Epochs | Accuracy | F1 (weighted) |
 |---|---|---|---|---|
 | DeiT | `deit_base_patch16_224` (timm) | 60 | **96.80%** | 0.9679 |
@@ -22,6 +24,28 @@ Classifying paintings into five art movements — **Baroque, Expressionism, Impr
 | ViT (second run) | `google/vit-base-patch16-224` | 10 | 91.20% | 0.9112 |
 
 DeiT extra metrics: macro specificity 0.9920, macro AUC 0.9973, inference ≈ 0.017 s/image.
+
+### DeiT (best model) – detailed results
+
+**Confusion matrix**
+
+![DeiT confusion matrix](results/confusion_matrix_deit.png)
+
+**Training and validation curves**
+
+![DeiT training curves](results/training_curves_deit.png)
+
+**ROC curves**
+
+![DeiT ROC curves](results/roc_curves_deit.png)
+
+**Sample predictions** (first test-set samples, all Baroque)
+
+![DeiT sample predictions](results/sample_predictions_deit.png)
+
+### Dataset samples
+
+![Dataset samples](results/dataset_samples.png)
 
 ## Repository structure
 
@@ -33,7 +57,7 @@ DeiT extra metrics: macro specificity 0.9920, macro AUC 0.9973, inference ≈ 0.
 │   ├── 04_swin.ipynb
 │   ├── 05_beit.ipynb
 │   └── 06_vit_second_run.ipynb
-├── results/            # confusion matrices, ROC curves, training curves
+├── results/            # figures used in this README
 ├── requirements.txt
 └── README.md
 ```
