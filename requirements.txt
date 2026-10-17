@@ -1,0 +1,16 @@
+torch
+torchvision
+timm
+transformers
+accelerate
+torchmetrics
+scikit-learn
+numpy
+matplotlib
+seaborn
+pillow
+opencv-python
+imagehash
+split-folders
+tqdm
+requests
